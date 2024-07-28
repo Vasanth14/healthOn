@@ -1,9 +1,14 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Dashboard from './Dashboard';
 
 const App = () => {
   return (
-    <Button>App</Button>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/'  element={<Dashboard />}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
