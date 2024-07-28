@@ -1,0 +1,120 @@
+html {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #f7f7f7;
+	color: #000000;
+	font-size: 14px;
+	position: relative;
+	min-height: 100%;
+	width: 100%;
+	padding-bottom: 60px;
+    font-family: "Inter", sans-serif;
+}
+
+.mobhide {
+    display: none;
+}
+
+.leftsidemenu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #181919;
+    width: 250px;
+    height: 100%;
+    z-index: 99;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.leftsidemenu a {
+    padding: 8px 8px 0px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.leftsidemenu a:hover{
+    color: #f1f1f1;
+}
+
+.closesidenav .leftsidemenu{
+    width: 0px;
+}
+
+.usernavbar {
+    padding-left: 272px;
+    padding-right: 16px;
+    border-bottom: 1px solid #0000001a;
+}
+
+.brand a{
+    padding: 32px 32px 32px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.brand .brandstyle {
+    background-color: #1EE654;
+    padding: 3px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.sidenavflex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.pagecontentbox {
+    padding: 16px 16px 16px 272px;
+    padding-left: 272px;
+}
+
+@media (max-width: 991px) {
+    .mobhide {
+        display: block;
+    }
+
+    .leftsidemenu {
+        display: none;
+    }
+
+    .usernavbar {
+        padding-left: 16px;
+        padding-right: 16px;
+        border-bottom: 1px solid #0000001a;
+    }
+
+    .pagecontentbox {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .mobbrand a{
+        color: #0E100F;
+        font-size: 24px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .mobbrand .mobbrandstyle {
+        background-color: #1EE654;
+        padding: 3px;
+        border-radius: 8px;
+        font-weight: 700;
+    }
+}
