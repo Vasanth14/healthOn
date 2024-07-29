@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { Image, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faPlusSquare, faHeart, faUser, faClock, faChartBar } from '@fortawesome/free-regular-svg-icons'
 
 const LeftSideMenu = () => {
   useEffect(() => {
@@ -26,13 +28,13 @@ const LeftSideMenu = () => {
                 Health<span className="brandstyle">ON</span>
               </Link>
             </div>
-            <Link to={"#"}>About</Link>
-            <Link to={"#"}>Services</Link>
-            <Link to={"#"}>Clients</Link>
-            <Link to={"#"}>Contact</Link>
+            <Link to={"#"}><FontAwesomeIcon className="me-2" icon={faChartBar} />Overview</Link>
+            <Link to={"#"}><FontAwesomeIcon className="me-2" icon={faClock} />Appointment</Link>
+            <Link to={"#"}><FontAwesomeIcon className="me-2" icon={faHeart} />My Patients</Link>
+            <Link to={"#"}><FontAwesomeIcon className="me-2" icon={faEnvelope} />Messages</Link>
           </div>
           <div className="sidenavend">
-            <Link to={"#"}>Logout</Link>
+            <Link to={"#"}><FontAwesomeIcon className="me-2" icon={faUser} />Logout</Link>
           </div>
         </div>
       </div>

@@ -1,11 +1,13 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import "../assets/css/user.css";
 import { Link } from "react-router-dom";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLightbulb, faMoon } from "@fortawesome/free-regular-svg-icons";
 
 function UserNav() {
   return (
@@ -45,6 +47,10 @@ function UserNav() {
           </NavDropdown>
         </Nav>
         <Nav>
+          <NavDropdown title="Theme" id="collapsible-nav-dropdown-theme">
+            <NavDropdown.Item href="#theme/3.1"><FontAwesomeIcon className="me-2" icon={faLightbulb} />Light</NavDropdown.Item>
+            <NavDropdown.Item href="#theme/3.1"><FontAwesomeIcon className="me-2" icon={faMoon} />Dark</NavDropdown.Item>
+          </NavDropdown>
           <Nav.Link href="#deets">More deets</Nav.Link>
           <Nav.Link eventKey={2} href="#memes">
             Dank memes
