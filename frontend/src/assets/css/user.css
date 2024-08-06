@@ -7,7 +7,7 @@ html {
 body {
 	margin: 0px;
 	padding: 0px;
-	background-color: #FAFAFB;
+	background-color: #f9f9f9;
 	color: #000000;
 	font-size: 14px;
 	position: relative;
@@ -25,7 +25,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    background: #0C0B19;
+    background: #fff;
     width: 250px;
     height: 100%;
     z-index: 99;
@@ -38,13 +38,14 @@ body {
     margin: 6px;
     text-decoration: none;
     font-size: 14px;
-    color: #fffce1;
+    color: #0e100f;
+    font-weight: 500;
     display: block;
     transition: 0.3s;
 }
 
 .leftsidemenu a:hover{
-    background-color: rgb(53, 60, 83);
+    background-color: #0c0b19;
     color: #fff;
     border-radius: 10px;
 }
@@ -69,22 +70,23 @@ body {
     margin: 6px;
     text-decoration: none;
     font-size: 18px;
-    color: #fffce1;
+    font-weight: 800;
+    color: #0E100F;
     display: block;
     transition: 0.3s;
 }
 
 .brand a:hover {
     background-color: unset;
-    color: #fff;
+    color: #000;
 }
 
-.brand .brandstyle {
+/* .brand .brandstyle {
     background-color: #1EE654;
     padding: 3px;
     border-radius: 8px;
     font-weight: 700;
-}
+} */
 
 .sidenavflex {
     display: flex;
@@ -140,11 +142,11 @@ body {
     float: none;
 }
 
+
 .cards {
     padding: 26px;
     padding-bottom: 30px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
+    border-radius: 10px;
     position: relative;
     display: flex;
     align-items: center;
@@ -178,6 +180,82 @@ body {
 
 .cards.consultingcard {
     background: #24a8fa;
+}
+
+/* dashboard analytics */
+
+.contentbox {
+    padding: 12px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.cardtitle h2{
+    color: #0E100F;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.flexbox.opanalytics > div:first-child {
+    width: 35%;
+}
+
+.flexbox.opanalytics > div:nth-child(even) {
+    width: 30%;
+}
+
+.flexbox.opanalytics > div:last-child {
+    width: 35%;
+}
+
+.profileimg {
+    width: 100%;
+    max-width: 40px;
+}
+
+.appoitmentcontent h2{
+    color: #0E100F;
+    font-size: 16px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.appoitmentcontent p {
+    margin-bottom: 0;
+    color: #8d8d8d;
+    font-size: 14px;
+}
+
+.declinebtn {
+    background: #feebf0;
+    border: 1px solid #feebf0;
+    color: #fb797a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.declinebtn:hover {
+    background: #feebf0;
+    border: 1px solid #feebf0;
+    color: #fb797a;
+    transform: scale(1.1);
+    transition: ease 0.5s;
+}
+
+.confirmbtn {
+    background: #C3BBFF;
+    border: 1px solid #C3BBFF;
+    color: #9081ff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.confirmbtn:hover {
+    background: #C3BBFF;
+    border: 1px solid #C3BBFF;
+    color: #9081ff;
+    transform: scale(1.1);
+    transition: ease 0.5s;
 }
 
 @media (max-width: 991px) {
