@@ -7,14 +7,14 @@ html {
 body {
 	margin: 0px;
 	padding: 0px;
-	background-color: #F9F9F9;
+	background-color: #FAFAFB;
 	color: #000000;
 	font-size: 14px;
 	position: relative;
 	min-height: 100%;
 	width: 100%;
 	padding-bottom: 60px;
-    font-family: "Inter", sans-serif;
+    font-family: "Manrope", sans-serif;
 }
 
 .mobhide {
@@ -25,7 +25,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    background: #fff;
+    background: #0C0B19;
     width: 250px;
     height: 100%;
     z-index: 99;
@@ -37,14 +37,14 @@ body {
     padding: 8px 8px 8px 32px;
     margin: 6px;
     text-decoration: none;
-    font-size: 16px;
-    color: #272628;
+    font-size: 14px;
+    color: #fffce1;
     display: block;
     transition: 0.3s;
 }
 
 .leftsidemenu a:hover{
-    background-color: #000000;
+    background-color: rgb(53, 60, 83);
     color: #fff;
     border-radius: 10px;
 }
@@ -57,20 +57,26 @@ body {
     padding-left: 272px;
     padding-right: 16px;
     border-bottom: 1px solid #0000001a;
+    background-color: #FAFAFB !important;
+}
+
+.brand {
+    border-bottom: 1px solid #f5f2d740;
 }
 
 .brand a{
-    padding: 16px 16px 16px 16px;
+    padding: 8px 8px 8px 32px;
+    margin: 6px;
     text-decoration: none;
-    font-size: 25px;
-    color: #272628;
+    font-size: 18px;
+    color: #fffce1;
     display: block;
     transition: 0.3s;
 }
 
 .brand a:hover {
     background-color: unset;
-    color: unset;
+    color: #fff;
 }
 
 .brand .brandstyle {
@@ -90,6 +96,88 @@ body {
 .pagecontentbox {
     padding: 16px 16px 16px 272px;
     padding-left: 272px;
+}
+
+/* title */
+
+.pagetitlediv h2 {
+    color: #0E100F;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* card */
+
+.flexbox {
+    display: flex;
+    width: 100%;
+    gap: 14px;
+}
+
+.flexbox > div {
+    width: 100%;
+}
+
+.cardimg {
+    /* filter: grayscale(1)invert(1); */
+    width: 100%;
+    max-width: 32px;
+}
+
+.table-content{
+    display: table;
+    margin: 0;
+    width: 100%;
+}
+
+.table-content > div:first-child {
+    width: 64px;
+}
+
+.table-content > div {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+
+.cards {
+    padding: 26px;
+    padding-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cardcontent .sub-heading {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fffce1;
+    margin-bottom: 0px;
+}
+
+.cardcontent .content {
+    color: #fffce1;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+
+.cards.appointmentcard {
+    background: #7a6efe;
+}
+
+.cards.patientcard {
+    background: #ff5363e6;
+}
+
+.cards.cliniccard {
+    background: #ffa901;
+}
+
+.cards.consultingcard {
+    background: #24a8fa;
 }
 
 @media (max-width: 991px) {
