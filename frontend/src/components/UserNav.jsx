@@ -29,8 +29,8 @@ function UserNav() {
           <Form className="">
             <Form.Control
               type="search"
-              placeholder="Search"
-              className="me-2"
+              placeholder="Search here..."
+              className="me-2 searchbox"
               aria-label="Search"
             />
           </Form>

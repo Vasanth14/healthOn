@@ -1,17 +1,48 @@
 import { Badge, Button, Image, Table } from "react-bootstrap";
 import LeftSideMenu from "./components/LeftSideMenu";
 import UserNav from "./components/UserNav";
-import { PieChart } from "react-minimal-pie-chart";
-import calendar from "../src/assets/images/calendar.svg";
+import calendar from "../src/assets/images/calendar.png";
+import doc from "../src/assets/images/doc.png";
+import pats from "../src/assets/images/pats.png";
+import consult from "../src/assets/images/consult.png";
 import avatar from "../src/assets/images/profile.png";
 import rightarrow from "../src/assets/images/right-arrow.svg";
 import pat from "../src/assets/images/pat.png";
 import trend from "../src/assets/images/trendup.svg";
 
-import React from "react";
+import ApexCharts from "react-apexcharts";
+
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Dashboard = () => {
+  const [options, setOptions] = useState({
+    chart: {
+      type: "donut",
+    },
+    dataLabels: {
+      enabled: true,
+      formatter: function (val, opts) {
+        return ""; // This removes the percentage label
+      },
+    },
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200,
+          },
+          legend: {
+            position: "bottom",
+          },
+        },
+      },
+    ],
+  });
+
+  const [series, setSeries] = useState([44, 55, 41, 17, 15]);
+
   return (
     <>
       <div className="pagecontent">
@@ -21,7 +52,7 @@ const Dashboard = () => {
           <div className="pagetitlediv">
             <h2 className="title">Welcome, Dr. Stephen!</h2>
           </div>
-          <div className="flexbox analyticscard my-3">
+          <div className="flexbox contentbox analyticscard my-3">
             <div className="cards appointmentcard">
               <div className="table-content">
                 <div>
@@ -37,7 +68,7 @@ const Dashboard = () => {
             <div className="cards patientcard">
               <div className="table-content">
                 <div>
-                  <Image src={calendar} className="cardimg" />
+                  <Image src={pats} className="cardimg" />
                 </div>
                 <div className="cardcontent">
                   <h4 className="sub-heading">166.4k</h4>
@@ -49,7 +80,7 @@ const Dashboard = () => {
             <div className="cards cliniccard">
               <div className="table-content">
                 <div>
-                  <Image src={calendar} className="cardimg" />
+                  <Image src={doc} className="cardimg" />
                 </div>
                 <div className="cardcontent">
                   <h4 className="sub-heading">54.k</h4>
@@ -61,7 +92,7 @@ const Dashboard = () => {
             <div className="cards consultingcard">
               <div className="table-content">
                 <div>
-                  <Image src={calendar} className="cardimg" />
+                  <Image src={consult} className="cardimg" />
                 </div>
                 <div className="cardcontent">
                   <h4 className="sub-heading">28.8k</h4>
@@ -73,17 +104,17 @@ const Dashboard = () => {
 
           <div className="flexbox opanalytics my-4">
             <div className="oprequest">
-              <div className="cardtitle">
-                <div>
-                  <h2>Appointment Request</h2>
-                </div>
-                <div>
-                  <Link to="#" className="linkbtn">
-                    View All <Image src={rightarrow} alt="arrow" />
-                  </Link>
-                </div>
-              </div>
               <div className="contentbox">
+                <div className="cardtitle mb-2">
+                  <div>
+                    <h2>Appointment Request</h2>
+                  </div>
+                  <div>
+                    <Link to="#" className="linkbtn">
+                      View All <Image src={rightarrow} alt="arrow" />
+                    </Link>
+                  </div>
+                </div>
                 <Table hover>
                   <tbody>
                     <tr>
@@ -189,10 +220,10 @@ const Dashboard = () => {
 
             <div className="patientanalytics">
               <div className="patientrecord">
-                <div className="cardtitle">
-                  <h2>Patients</h2>
-                </div>
                 <div className="contentbox">
+                  <div className="cardtitle mb-2">
+                    <h2>Patients</h2>
+                  </div>
                   <Table hover>
                     <tbody>
                       <tr>
@@ -254,29 +285,25 @@ const Dashboard = () => {
                 </div>
               </div>
               <div className="contentbox patientchart">
-                <PieChart
-                  data={[
-                    { title: "One", value: 10, color: "#7a6efe" },
-                    { title: "Two", value: 15, color: "#ff5363e6" },
-                    { title: "Three", value: 20, color: "#ffa901" },
-                  ]}
-                />
-                ;
+                <div className="cardtitle mb-2">
+                  <h2>Patients</h2>
+                </div>
+                <ApexCharts options={options} series={series} type="donut" />
               </div>
             </div>
 
             <div className="tdyappointment">
-              <div className="cardtitle">
-                <div>
-                  <h2>Today Appointments</h2>
-                </div>
-                <div>
-                  <Link to="#" className="linkbtn">
-                    View All <Image src={rightarrow} alt="arrow" />
-                  </Link>
-                </div>
-              </div>
               <div className="contentbox">
+                <div className="cardtitle mb-2">
+                  <div>
+                    <h2>Today Appointments</h2>
+                  </div>
+                  <div>
+                    <Link to="#" className="linkbtn">
+                      View All <Image src={rightarrow} alt="arrow" />
+                    </Link>
+                  </div>
+                </div>
                 <Table hover>
                   <tbody>
                     <tr>

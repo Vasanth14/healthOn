@@ -1,3 +1,25 @@
+@font-face {
+    font-family: 'GoogleSans-Regular';
+    src: url('../../../public/fonts/GoogleSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GoogleSans-Medium';
+    src: url('../../../public/fonts/GoogleSans-Medium.ttf') format('truetype');
+    font-weight: medium;
+    font-style: medium;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GoogleSans-Bold';
+    src: url('../../../public/fonts/GoogleSans-Bold.ttf') format('truetype');
+    font-weight: Bold;
+    font-style: Bold;
+    font-display: swap;
+  }
+
 html {
 	width: 100%;
 	height: 100%;
@@ -7,14 +29,14 @@ html {
 body {
 	margin: 0px;
 	padding: 0px;
-	background-color: #f9f9f9;
+	background-color: #F9FAFB;
 	color: #000000;
 	font-size: 14px;
 	position: relative;
 	min-height: 100%;
 	width: 100%;
 	padding-bottom: 60px;
-    font-family: "Manrope", sans-serif;
+    font-family: "GoogleSans-Regular", sans-serif;
 }
 
 .mobhide {
@@ -34,18 +56,18 @@ body {
 }
 
 .leftsidemenu a {
-    padding: 8px 8px 8px 32px;
+    padding: 12px 8px 12px 24px;
     margin: 6px;
     text-decoration: none;
     font-size: 14px;
-    color: #0e100f;
-    font-weight: 500;
+    color: #737791;
+    font-weight: normal;
     display: block;
     transition: 0.3s;
 }
 
 .leftsidemenu a:hover{
-    background-color: #0c0b19;
+    background-color: #5D5FEF;
     color: #fff;
     border-radius: 10px;
 }
@@ -57,16 +79,11 @@ body {
 .usernavbar {
     padding-left: 272px;
     padding-right: 16px;
-    border-bottom: 1px solid #0000001a;
-    background-color: #FAFAFB !important;
-}
-
-.brand {
-    border-bottom: 1px solid #f5f2d740;
+    background-color: #fff !important;
 }
 
 .brand a{
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 24px;
     margin: 6px;
     text-decoration: none;
     font-size: 18px;
@@ -93,6 +110,7 @@ body {
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+    padding: 0px 10px;
 }
 
 .pagecontentbox {
@@ -100,10 +118,27 @@ body {
     padding-left: 272px;
 }
 
+.searchbox {
+    border: none;
+    background: #F9FAFB;
+    border-radius: 16px;
+}
+
+.searchbox:focus {
+    border: none;
+    box-shadow: none;
+    background: #F9FAFB;
+}
+
+.searchbox::placeholder {
+    font-size: 14px;
+    color: #737791;
+}
+
 /* title */
 
 .pagetitlediv h2 {
-    color: #0E100F;
+    color: #151D48;
     font-size: 18px;
     font-weight: 600;
 }
@@ -154,40 +189,42 @@ body {
 
 .cardcontent .sub-heading {
     font-size: 22px;
-    font-weight: 800;
-    color: #fffce1;
+    font-weight: 600;
+    color: #151D48;
     margin-bottom: 0px;
 }
 
 .cardcontent .content {
-    color: #fffce1;
+    color: #425166;
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 500;
     margin-bottom: 0px;
 }
 
 .cards.appointmentcard {
-    background: #7a6efe;
+    background: #FFE2E5;
 }
 
 .cards.patientcard {
-    background: #ff5363e6;
+    background: #FFF4DE;
 }
 
 .cards.cliniccard {
-    background: #ffa901;
+    background: #DCFCE7;
 }
 
 .cards.consultingcard {
-    background: #24a8fa;
+    background: #F3E8FF;
 }
 
 /* dashboard analytics */
 
 .contentbox {
-    padding: 12px;
+    padding: 16px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+
 }
 
 .cardtitle {
@@ -212,8 +249,8 @@ body {
 }
 
 .cardtitle h2{
-    color: #0E100F;
-    font-size: 16px;
+    color: #05004E;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -236,22 +273,22 @@ body {
 }
 
 .appoitmentcontent h2{
-    color: #0E100F;
-    font-size: 16px;
+    color: #151D48;
+    font-size: 14px;
     margin-bottom: 0;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .appoitmentcontent p {
     margin-bottom: 0;
-    color: #8d8d8d;
+    color: #96A5B8;
     font-size: 14px;
 }
 
 .declinebtn {
-    background: #feebf0;
+    background: #FFE2E5;
     border: 1px solid #feebf0;
-    color: #fb797a;
+    color: #151D48;
     font-size: 14px;
     font-weight: 600;
 }
@@ -265,9 +302,9 @@ body {
 }
 
 .confirmbtn {
-    background: #C3BBFF;
-    border: 1px solid #C3BBFF;
-    color: #9081ff;
+    background: #F3E8FF;
+    border: 1px solid #F3E8FF;
+    color: #151D48;
     font-size: 14px;
     font-weight: 600;
 }
@@ -286,15 +323,15 @@ table tr{
 }
 
 .patcontent h4{
-    font-size: 16px;
-    color: #0E100F;
-    font-weight: 800;
+    font-size: 14px;
+    color: #151D48;
+    font-weight: 600;
     margin-bottom: 0;
 }
 
 .patcontent p {
     font-size: 14px;
-    color: #8d8d8d;
+    color: #464E5F;
     font-weight: 600;
     margin-bottom: 0;
 }
